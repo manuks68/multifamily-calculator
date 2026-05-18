@@ -93,6 +93,8 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
    remove the outer bordered content box so reports look like professional letters.
    This does not affect the live app cards, inputs, buttons, or calculations. */
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   .content,
   .pdf-content,
   .pdf-body,
@@ -211,6 +213,8 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
 <style id="pdf-header-left-title-final-v1">
 /* Main-app fallback only; generated PDF templates are patched directly above. */
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   .meta{display:none!important;}
   .header{text-align:left!important;border-bottom:2px solid #1d4ed8!important;}
   .header-top{display:block!important;text-align:left!important;}
@@ -222,6 +226,8 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
 
 <style id="audit-stamp-professional-footer-v22">
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   @page{
     size: Letter;
     margin:.35in .45in .14in .45in;
@@ -333,6 +339,8 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
 <style id="audit-stamp-final-bottom-visible-v3">
 /* Final PDF audit stamp fix: bottom-aligned, fully visible, no transform clipping. */
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   @page{size:Letter;margin:.35in .45in .08in .45in;}
   .page{position:relative!important;overflow:hidden!important;padding-bottom:.30in!important;}
   .content,.pdf-content{overflow:visible!important;position:static!important;padding-bottom:.30in!important;}
@@ -353,6 +361,8 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
 <style id="audit-stamp-visible-bottom-final-v4">
 /* Final audit stamp fix: complete text, no clipping, as low as safely printable. */
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   .audit-stamp-pdf,.audit-stamp-footer,.pdf-footer-audit{
     position:absolute!important;
     left:.14in!important;right:.14in!important;bottom:.09in!important;
@@ -377,6 +387,8 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
 <style id="audit-stamp-footer-height-fix-v5">
 /* v5: footer clearance reduced so the audit stamp can sit lower without clipping. */
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   @page{size:Letter;margin:.35in .45in .03in .45in;}
   .audit-stamp-pdf,.audit-stamp-footer,.pdf-footer-audit{
     position:absolute!important;left:.10in!important;right:.10in!important;bottom:.015in!important;
@@ -392,13 +404,16 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
 
 <style id="audit-stamp-final-v7-live-and-template">
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   .audit-stamp-pdf,.audit-stamp-footer,.pdf-footer-audit{
-    position:absolute!important;left:10px!important;right:10px!important;bottom:1px!important;width:auto!important;margin:0!important;
-    border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;
+    position:absolute!important;left:0!important;right:0!important;bottom:1px!important;width:100%!important;margin:0!important;padding:0 10px!important;box-sizing:border-box!important;
+    border-top:1px solid #2563eb!important;padding-top:3px!important;font-size:11px!important;line-height:1.22!important;
     color:#374151!important;background:#fff!important;text-align:center!important;white-space:normal!important;overflow:visible!important;
     overflow-wrap:break-word!important;word-break:normal!important;transform:none!important;z-index:999999!important;display:block!important;
     visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;
   }
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;}
 }
 </style>
 <style id="anuks-pdf-preview-actions-bottom-v21">
@@ -432,6 +447,8 @@ body.full-actual-mode .quick-disabled-card,body.full-actual-mode .quick-disabled
 .closeBtn{background:#6b7280!important;color:#ffffff!important;}
 
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   .actions{
     display:none!important;
   }
@@ -3368,7 +3385,7 @@ function exportInvestorPDF(){
   .title{font-size:21px;font-weight:800;margin:6px 0 0 0;color:#0f172a;line-height:1.10;text-align:left;letter-spacing:.01em}
   .subtitle{font-size:12px;color:#64748b;text-align:left;margin-top:2px;text-transform:uppercase;letter-spacing:.06em}
   .content{border:none!important;border-radius:0!important;padding:8px 0 4px;line-height:1.22;font-size:15px;white-space:normal;box-shadow:none!important;background:#ffffff!important;flex:1 1 auto;display:block;box-sizing:border-box;min-height:0;overflow:visible;position:static}
-  .audit-stamp-pdf{position:absolute!important;left:10px!important;right:10px!important;bottom:1px!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .audit-stamp-pdf{position:absolute!important;left:0!important;right:0!important;bottom:1px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;padding:0 10px!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   .key-metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px 14px;margin:4px 0 6px 0;font-size:14px}
   .key-metric-row{display:grid;grid-template-columns:1.15fr .85fr;column-gap:8px;align-items:start;padding:1px 0;border-bottom:1px solid #e5e7eb;break-inside:avoid}
   .key-metric-label{font-weight:600;color:#374151;line-height:1.22}
@@ -3380,6 +3397,8 @@ function exportInvestorPDF(){
   .printBtn{border:0;border-radius:8px;padding:10px 16px;font-size:14px;font-weight:700;background:#0f62fe;color:#fff;cursor:pointer}
   .closeBtn{border:0;border-radius:8px;padding:10px 16px;font-size:14px;font-weight:700;background:#6b7280;color:#fff;cursor:pointer}
   @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
     .actions{display:none!important}
     html,body{width:8.5in;min-height:11in;margin:0!important;overflow:visible!important}
     .page{width:7.6in;max-width:7.6in;height:10.62in;min-height:10.62in;margin:0 auto;padding:0 0 .20in 0;overflow:visible;page-break-after:avoid;break-after:avoid;position:relative;display:flex;flex-direction:column}
@@ -3392,7 +3411,7 @@ function exportInvestorPDF(){
     .content{padding:6px 8px 3px;font-size:14.2px;line-height:1.14;flex:1 1 auto;min-height:0;overflow:visible;position:static;display:block}
     .key-metrics-grid{grid-template-columns:1fr 1fr;gap:2px 10px;font-size:13.2px}
     .key-metric-row{padding:1px 0}
-    .audit-stamp-pdf{position:absolute!important;left:10px!important;right:10px!important;bottom:1px!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+    .audit-stamp-pdf{position:absolute!important;left:0!important;right:0!important;bottom:1px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;padding:0 10px!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   }
   @media print and (max-width:480px){
     @page{size:Letter;margin:.35in .45in .025in .45in}
@@ -3405,7 +3424,7 @@ function exportInvestorPDF(){
     .content{font-size:11.45px!important;line-height:1.20!important;padding:8px 9px 3px!important;overflow:visible!important;position:static!important;display:block!important}
     .key-metrics-grid{gap:3px 10px!important;font-size:10.6px!important;margin-bottom:7px!important}
     .key-metric-row{padding:1.5px 0!important}
-    .audit-stamp-pdf{position:absolute!important;left:10px!important;right:10px!important;bottom:1px!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+    .audit-stamp-pdf{position:absolute!important;left:0!important;right:0!important;bottom:1px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;padding:0 10px!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   }
 </style>
 
@@ -3466,6 +3485,8 @@ function exportInvestorPDF(){
 .closeBtn{background:#6b7280!important;color:#ffffff!important;}
 
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   .actions{
     display:none!important;
   }
@@ -4085,7 +4106,7 @@ function exportBrokerResponsePDF(){
   .title{font-size:21px;font-weight:800;margin:6px 0 0 0;color:#0f172a;line-height:1.10;text-align:left;letter-spacing:.01em}
   .subtitle{font-size:12px;color:#64748b;text-align:left;margin-top:2px;text-transform:uppercase;letter-spacing:.06em}
   .content{border:none!important;border-radius:0!important;padding:8px 0 4px;line-height:1.22;font-size:15px;white-space:normal;box-shadow:none!important;background:#ffffff!important;flex:1 1 auto;display:block;box-sizing:border-box;min-height:0;overflow:visible;position:static}
-  .audit-stamp-pdf{position:absolute!important;left:10px!important;right:10px!important;bottom:1px!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .audit-stamp-pdf{position:absolute!important;left:0!important;right:0!important;bottom:1px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;padding:0 10px!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   .bp-line{display:grid;grid-template-columns:22px 1fr;column-gap:4px;margin:0 0 1px 0;break-inside:avoid}
   .bp-num{font-weight:700;text-align:right}
   .bp-text{display:block}
@@ -4093,6 +4114,8 @@ function exportBrokerResponsePDF(){
   .printBtn{border:0;border-radius:8px;padding:10px 16px;font-size:14px;font-weight:700;background:#0f62fe;color:#fff;cursor:pointer}
   .closeBtn{border:0;border-radius:8px;padding:10px 16px;font-size:14px;font-weight:700;background:#6b7280;color:#fff;cursor:pointer}
   @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
     .actions{display:none!important}
     html,body{width:8.5in;min-height:11in;margin:0!important;overflow:visible!important}
     .page{width:7.6in;max-width:7.6in;height:10.62in;min-height:10.62in;margin:0 auto;padding:0 0 .20in 0;overflow:visible;page-break-after:avoid;break-after:avoid;position:relative;display:flex;flex-direction:column}
@@ -4103,7 +4126,7 @@ function exportBrokerResponsePDF(){
     .title{font-size:19px;text-align:left}
     .subtitle{font-size:10.5px;text-align:left}
     .content{padding:6px 8px 3px;font-size:14.2px;line-height:1.14;flex:1 1 auto;min-height:0;overflow:visible;position:static;display:block}
-    .audit-stamp-pdf{position:absolute!important;left:10px!important;right:10px!important;bottom:1px!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+    .audit-stamp-pdf{position:absolute!important;left:0!important;right:0!important;bottom:1px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;padding:0 10px!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   }
   @media print and (max-width:480px){
     @page{size:Letter;margin:.35in .45in .025in .45in}
@@ -4116,7 +4139,7 @@ function exportBrokerResponsePDF(){
     .content{font-size:11.45px!important;line-height:1.20!important;padding:8px 9px 3px!important;overflow:visible!important;position:static!important;display:block!important}
     .key-metrics-grid{gap:3px 10px!important;font-size:10.6px!important;margin-bottom:7px!important}
     .key-metric-row{padding:1.5px 0!important}
-    .audit-stamp-pdf{position:absolute!important;left:10px!important;right:10px!important;bottom:1px!important;width:auto!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+    .audit-stamp-pdf{position:absolute!important;left:0!important;right:0!important;bottom:1px!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;padding:0 10px!important;border-top:1px solid #2563eb!important;padding:3px 2px 0!important;font-size:11px!important;line-height:1.22!important;color:#374151!important;font-style:italic!important;text-align:center!important;white-space:normal!important;overflow:visible!important;overflow-wrap:break-word!important;word-break:normal!important;page-break-inside:avoid!important;break-inside:avoid!important;transform:none!important;z-index:999999!important;background:#fff!important;display:block!important;visibility:visible!important;opacity:1!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
   }
 </style>
 
@@ -4485,6 +4508,8 @@ input:focus, textarea:focus, select:focus{
 .closeBtn{background:#6b7280!important;color:#ffffff!important;}
 
 @media print{
+  * {-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+  .actions,.printBtn,.closeBtn,button{display:none!important;visibility:hidden!important;height:0!important;overflow:hidden!important;}
   .actions{
     display:none!important;
   }
